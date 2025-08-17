@@ -6,14 +6,26 @@ export function useFlashcard() {
   const [currentView, setCurrentView] = useState("dashboard");
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
   const [currentCard, setCurrentCard] = useState(0);
+  const [shuffledCards, setShuffledCards] = useState<number[]>([]);
   const [studyStats, setStudyStats] = useState<StudyStats>({
     correctAnswers: 0,
     totalAnswered: 0,
     streak: 0,
   });
 
-  const startStudySession = (categoryKey: number) => {
+  const shuffleCards = (totalCards: number) => {
+    const cardsArray = Array.from({length: totalCards}, (_, i) => i);
+    // Algoritmo de Fisher-Yates para embaralhar
+    for (let i = cardsArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cardsArray[i], cardsArray[j]] = [cardsArray[j], cardsArray[i]];
+    }
+    setShuffledCards(cardsArray);
+  };
+
+  const startStudySession = (categoryKey: number, totalCards: number) => {
     setSelectedCategory(categoryKey);
+    shuffleCards(totalCards);
     setCurrentView("study");
     setCurrentCard(0);
     setIsFlipped(false);
@@ -55,6 +67,7 @@ export function useFlashcard() {
     selectedCategory,
     currentCard,
     studyStats,
+    shuffledCards,
     startStudySession,
     getAccuracy,
     handleFlip,

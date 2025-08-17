@@ -10,6 +10,7 @@ import { LoadingSpinner } from "@/components/LoadingSpinner";
 export default function FlashcardPage() {
   const { 
     studyStats, 
+    shuffledCards,
     getAccuracy, 
     startStudySession,
     currentCard,
@@ -40,10 +41,14 @@ export default function FlashcardPage() {
     return categories[selectedCategory]?.cards || [];
   };
 
+  const getCurrentCardData = () => {
+    if (selectedCategory === null || shuffledCards.length === 0) return null;
+    const cardIndex = shuffledCards[currentCard];
+    return categories[selectedCategory]?.cards[cardIndex];
+  };
+
   if (!mounted) {
-    return (
-      <LoadingSpinner />
-    );
+    return <LoadingSpinner />;
   }
 
   // Dashboard View
@@ -52,7 +57,10 @@ export default function FlashcardPage() {
       <DashboardView 
         studyStats={studyStats} 
         getAccuracy={getAccuracy} 
-        startStudySession={startStudySession}
+        startStudySession={(categoryKey) => {
+          const cards = categories[categoryKey]?.cards || [];
+          startStudySession(categoryKey, cards.length);
+        }}
         progressValues={progressValues}
       />
     );
@@ -68,7 +76,7 @@ export default function FlashcardPage() {
     );
   }
 
-  const currentCardData = cards[currentCard];
+  const currentCardData = getCurrentCardData();
   const accuracy = getAccuracy();
 
   if (!currentCardData) {
