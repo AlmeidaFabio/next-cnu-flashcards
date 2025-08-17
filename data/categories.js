@@ -34,7 +34,7 @@ export const categories = [
   },
   {
     id: 4,
-    name: "Diversida e Inclusão",
+    name: "Diversidade e Inclusão",
     color: "from-pink-500 to-rose-600",
     icon: "🌈",
     cards: diversidadeEInclusaoFlashcards
@@ -62,28 +62,28 @@ export const categories = [
   },
   {
     id: 8,
-    name: "Desenvolvimento produtivo e regional no Brasil",
+    name: "Desenvolvimento Produtivo e Regional no Brasil",
     color: "from-orange-500 to-red-600",
     icon: "🏭",
     cards: eixo2
   },
   {
     id: 9,
-    name: "Gestão estratégica e Regulação",
+    name: "Gestão Estratégica e Regulação",
     color: "from-slate-500 to-gray-700",
     icon: "📊",
     cards: eixo3
   },
   {
     id: 10,
-    name: "Desenvolvimento socioeconômico no Brasil",
+    name: "Desenvolvimento Socioeconômico no Brasil",
     color: "from-amber-500 to-yellow-600",
     icon: "📈",
     cards: eixo4
   },
   {
     id: 11,
-    name: "Desigualdades e Dinâmicas socioeconômicas no Brasil",
+    name: "Desigualdades e Dinâmicas Socioeconômicas no Brasil",
     color: "from-red-500 to-pink-700",
     icon: "📊",
     cards: eixo5
