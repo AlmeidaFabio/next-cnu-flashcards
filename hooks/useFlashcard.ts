@@ -25,7 +25,12 @@ export function useFlashcard() {
 
   const startStudySession = (categoryKey: number, totalCards: number) => {
     setSelectedCategory(categoryKey);
-    shuffleCards(totalCards);
+    
+    // Só embaralha se for uma nova categoria ou se shuffledCards estiver vazio
+    if (selectedCategory !== categoryKey || shuffledCards.length === 0) {
+      shuffleCards(totalCards);
+    }
+    
     setCurrentView("study");
     setCurrentCard(0);
     setIsFlipped(false);

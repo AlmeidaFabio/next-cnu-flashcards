@@ -7,20 +7,21 @@ import React from "react";
 
 interface StudyViewProps {
   selectedCategory: number;
-  categoryData?: Category; 
+  categoryData?: Category;
   currentCardIndex: number;
   isFlipped: boolean;
   accuracy: number;
   onAnswer: (isCorrect: boolean) => void;
   onBackToDashboard: () => void;
   onFlip: () => void;
-  onNavigate: (direction: 'next' | 'prev') => void;
+  onNavigate: (direction: "next" | "prev") => void;
   streak: number;
   cardData: Flashcard;
   totalCards: number;
 }
 
-const gradientClasses = "min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-8";
+const gradientClasses =
+  "min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-8";
 
 export const StudyView: React.FC<StudyViewProps> = ({
   selectedCategory,
@@ -28,21 +29,16 @@ export const StudyView: React.FC<StudyViewProps> = ({
   isFlipped,
   accuracy,
   streak,
+  cardData,
+  totalCards,
   onFlip,
   onAnswer,
   onNavigate,
   onBackToDashboard,
 }) => {
-  // Validação de segurança
-  const isValidCategory = selectedCategory >= 0 && selectedCategory < categories.length;
-  const category = isValidCategory ? categories[selectedCategory] : null;
-  const cards: Flashcard[] = category?.cards || [];
-  
-  // Garante que currentCard está dentro dos limites
-  const safeCurrentCard = Math.max(0, Math.min(currentCardIndex, cards.length - 1));
-  const currentCardData = cards[safeCurrentCard];
+  const category = categories[selectedCategory];
 
-  if (!category || cards.length === 0) {
+  if (!category || !cardData) {
     return (
       <div className={gradientClasses}>
         <div className="text-center text-white">
@@ -63,27 +59,25 @@ export const StudyView: React.FC<StudyViewProps> = ({
       <div className="max-w-2xl w-full">
         <StudyHeader
           category={category}
-          currentCard={safeCurrentCard}
-          totalCards={cards.length}
+          currentCard={currentCardIndex}
+          totalCards={totalCards}
           accuracy={accuracy}
           streak={streak}
           onBack={onBackToDashboard}
         />
 
-        {currentCardData && (
-          <FlashCard3D
-            card={currentCardData}
-            isFlipped={isFlipped}
-            onFlip={onFlip}
-            onAnswer={onAnswer}
-          />
-        )}
+        <FlashCard3D
+          card={cardData}
+          isFlipped={isFlipped}
+          onFlip={onFlip}
+          onAnswer={onAnswer}
+        />
 
         <NavigationControls
-          currentCard={safeCurrentCard}
-          totalCards={cards.length}
-          onPrevious={() => onNavigate('prev')}
-          onNext={() => onNavigate('next')}
+          currentCard={currentCardIndex}
+          totalCards={totalCards}
+          onPrevious={() => onNavigate("prev")}
+          onNext={() => onNavigate("next")}
         />
 
         <div className="mt-8 text-center text-blue-200 text-sm">

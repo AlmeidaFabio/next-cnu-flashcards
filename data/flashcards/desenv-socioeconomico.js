@@ -1973,7 +1973,7 @@ export const eixo4 = [
       "Qual a principal finalidade das instituições de fomento no desenvolvimento regional?",
     answer:
       "Diminuir as desigualdades regionais no Brasil, direcionando investimentos e crédito para as áreas menos desenvolvidas do país.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 262,
@@ -1981,7 +1981,7 @@ export const eixo4 = [
       "Cite os três **Fundos Constitucionais de Financiamento (FCFs)** existentes no Brasil.",
     answer:
       "Fundo Constitucional de Financiamento do Norte (FNO), Fundo Constitucional de Financiamento do Nordeste (FNE) e Fundo Constitucional de Financiamento do Centro-Oeste (FCO).",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 263,
@@ -1989,7 +1989,7 @@ export const eixo4 = [
       "De onde vêm os recursos que alimentam os Fundos Constitucionais de Financiamento?",
     answer:
       "Principalmente de 3% da arrecadação do Imposto de Renda (IR) e do Imposto sobre Produtos Industrializados (IPI).",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 264,
@@ -1997,25 +1997,25 @@ export const eixo4 = [
       "Qual o papel do **Banco Nacional de Desenvolvimento Econômico e Social (BNDES)** no financiamento regional?",
     answer:
       "O BNDES atua como um dos principais agentes, financiando projetos de infraestrutura, inovação e setores produtivos em todo o território nacional, com o objetivo de atenuar os desequilíbrios regionais.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 265,
     question: "Qual banco público federal é o principal operador do **FNE**?",
     answer: "O Banco do Nordeste (BNB).",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 266,
     question: "E qual banco é o principal operador do **FNO**?",
     answer: "O Banco da Amazônia (BASA).",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 267,
     question: "Qual banco público é o principal operador do **FCO**?",
     answer: "O Banco do Brasil (BB).",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 268,
@@ -2023,7 +2023,7 @@ export const eixo4 = [
       "O que são as **Superintendências de Desenvolvimento Regional** e qual sua função?",
     answer:
       "São autarquias como a SUDENE, a SUDAM e a SUDECO, criadas para planejar e coordenar políticas públicas e ações de desenvolvimento nas suas respectivas regiões.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 269,
@@ -2031,7 +2031,7 @@ export const eixo4 = [
       "Como os fundos de desenvolvimento e os incentivos fiscais ajudam a atrair investimentos para as regiões menos desenvolvidas?",
     answer:
       "Oferecem linhas de crédito com juros mais baixos e condições mais favoráveis, além de isenções fiscais, para compensar os desafios e estimular o investimento privado.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 270,
@@ -2039,14 +2039,14 @@ export const eixo4 = [
       "Qual é a principal diferença entre os Fundos Constitucionais de Financiamento e os Fundos de Desenvolvimento (FDA, FDNE, FDCO)?",
     answer:
       "Os FCFs oferecem crédito e financiamento a juros baixos, enquanto os Fundos de Desenvolvimento participam do capital de grandes projetos, assumindo parte do risco do investimento.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 271,
     question: "O que é o **Sistema Nacional de Fomento (SNF)**?",
     answer:
       "É o conjunto de instituições financeiras públicas e privadas que atua no financiamento de longo prazo para o desenvolvimento econômico e social do país.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 272,
@@ -2054,14 +2054,14 @@ export const eixo4 = [
       "Além do financiamento, cite outra função importante dos bancos de desenvolvimento regionais.",
     answer:
       "Eles atuam na estruturação de projetos, na assistência técnica e na atração de investimentos para os setores prioritários de cada região.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 273,
     question: "Qual o papel do **BNDESPAR**?",
     answer:
       "É a subsidiária de participações societárias do BNDES, que investe em empresas e fundos de investimento para fortalecer o mercado de capitais e as companhias nacionais.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 274,
@@ -2069,7 +2069,7 @@ export const eixo4 = [
       "Como o **crédito rural** se encaixa no financiamento do desenvolvimento regional?",
     answer:
       "É uma importante ferramenta para o fomento da atividade agropecuária nas regiões, especialmente para a agricultura familiar e os pequenos produtores, com taxas e condições especiais.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 275,
@@ -2077,14 +2077,14 @@ export const eixo4 = [
       "Qual o principal desafio na distribuição de crédito entre as regiões do Brasil?",
     answer:
       "A desigualdade na alocação de recursos, com as regiões mais desenvolvidas recebendo a maior parte do crédito, o que pode agravar os desequilíbrios existentes.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 276,
     question: "O que são as **agências de fomento estaduais**?",
     answer:
       "São instituições financeiras públicas, ligadas aos governos estaduais, que apoiam financeiramente projetos locais e regionais, em complementação à atuação dos bancos federais.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 277,
@@ -2092,7 +2092,7 @@ export const eixo4 = [
       "Qual a principal crítica ao modelo de financiamento do desenvolvimento regional no Brasil?",
     answer:
       "Apesar do volume de recursos, a distribuição e a efetividade do uso desses fundos nem sempre atingem os objetivos de redução de desigualdades, por razões como burocracia e falta de foco em projetos de maior impacto.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 278,
@@ -2100,7 +2100,7 @@ export const eixo4 = [
       "O que a **Associação Brasileira de Desenvolvimento (ABDE)** representa?",
     answer:
       "É a entidade que reúne e representa as instituições de desenvolvimento do Brasil, incluindo bancos de desenvolvimento, agências de fomento e bancos cooperativos.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 279,
@@ -2108,7 +2108,7 @@ export const eixo4 = [
       "Como os financiamentos de longo prazo contribuem para o desenvolvimento regional?",
     answer:
       "Permitem que as empresas invistam em projetos de grande escala, como fábricas ou infraestrutura, que possuem um período de retorno mais longo e são essenciais para o crescimento sustentável.",
-    categoryId: 11,
+    categoryId: 10,
   },
   {
     id: 280,
@@ -2116,6 +2116,6 @@ export const eixo4 = [
       "Cite uma área estratégica para o desenvolvimento regional que recebe financiamento público no Brasil.",
     answer:
       "Infraestrutura (transporte, energia, saneamento), inovação tecnológica, agricultura familiar, indústria e turismo.",
-    categoryId: 11,
+    categoryId: 10,
   },
 ];
